@@ -21,4 +21,3 @@ document.getElementById('btn_calc').addEventListener('click', function () {
         inputWindow.value = result;
     }
 })
-//test
