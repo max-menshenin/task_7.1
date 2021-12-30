@@ -1,5 +1,6 @@
 .calc-row {
-    height: 100vh;
+    height: 1vh;
+    margin: 1px;
     font-family: 'Share Tech Mono', monospace;
 }
 
