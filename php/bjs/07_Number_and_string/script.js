@@ -1,18 +1,16 @@
 let lastOperand = 0;
 let operation = null;
-let DIVISION_ZERO;
 
 const inputWindow = document.getElementById('inputWindow');
+
 
 document.getElementById('btn_1').addEventListener('click', function () {
     inputWindow.value += '1';
 })
 
-
 document.getElementById('btn_2').addEventListener('click', function () {
     inputWindow.value += '2';
 })
-
 
 document.getElementById('btn_3').addEventListener('click', function () {
     inputWindow.value += '3';
