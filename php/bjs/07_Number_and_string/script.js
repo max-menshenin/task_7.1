@@ -1,5 +1,6 @@
 let lastOperand = 0;
 let operation = null;
+let DIVISION_ZERO;
 
 const inputWindow = document.getElementById('inputWindow');
 
@@ -51,6 +52,14 @@ document.getElementById('btn_sum').addEventListener('click', function () {
     inputWindow.value = '';
 })
 
+document.getElementById('btn_div').addEventListener('click', function () {
+    lastOperand = parseInt(inputWindow.value);
+    if (lastOperand === 0) {
+        operation = 'div';
+        inputWindow.value = '';
+    }
+})
+
 document.getElementById('btn_calc').addEventListener('click', function () {
     if (operation === 'sum') {
         const result = lastOperand + parseInt(inputWindow.value);
@@ -58,7 +67,15 @@ document.getElementById('btn_calc').addEventListener('click', function () {
         lastOperand = 0;
         inputWindow.value = result;
     }
+    if (operation === 'div' && DIVISION_ZERO) {
+        if (parseInt(inputWindow.value) === 0) {
+            alert('На ноль делить нельзя');
+            
+        }
+    }
+
 })
+
 //-----------------------------------
 document.getElementById('btn_clr').addEventListener('click', function () {
     lastOperand = 0;
