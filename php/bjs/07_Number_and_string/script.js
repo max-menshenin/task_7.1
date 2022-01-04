@@ -64,14 +64,11 @@ document.getElementById('btn_calc').addEventListener('click', function () {
         lastOperand = 0;
         inputWindow.value = result;
     }
-    console.log(operation, inputWindow.value);
     if (operation === 'div') {
-        console.log(operation, inputWindow.value);
-
-        if (inputWindow.value === 0) {
+        if (inputWindow.value == 0) {
             alert('Нельзя на ноль делить');
-
         }
+        
     }
 })
 
@@ -84,5 +81,5 @@ document.getElementById('btn_clr').addEventListener('click', function () {
 })
 
 document.getElementById('btn_rem').addEventListener('click', function () {
-    inputWindow.value.length = inputWindow.value.length--;
+    inputWindow.value.length = inputWindow.value.length - 1;
 })
