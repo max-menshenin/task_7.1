@@ -79,5 +79,5 @@ document.getElementById('btn_clr').addEventListener('click', function () {
 })
 
 document.getElementById('btn_rem').addEventListener('click', function () {
-    
+    inputWindow.value.length = inputWindow.value.length--;
 })
