@@ -45,21 +45,21 @@ document.getElementById('btn_0').addEventListener('click', function () {
 })
 
 document.getElementById('btn_sum').addEventListener('click', function () {
-    lastOperand = parseInt(inputWindow.value);
+    lastOperand = parseInt(inputWindow.value, 10);
     operation = 'sum';
     inputWindow.value = '';
 })
 
 document.getElementById('btn_div').addEventListener('click', function () {
 
-    lastOperand = parseInt(inputWindow.value);
+    lastOperand = parseInt(inputWindow.value, 10);
     operation = 'div';
     inputWindow.value = '';
 })
 
 document.getElementById('btn_calc').addEventListener('click', function () {
     if (operation === 'sum') {
-        const result = lastOperand + parseInt(inputWindow.value);
+        const result = lastOperand + parseInt(inputWindow.value, 10);
         operation = null;
         lastOperand = 0;
         inputWindow.value = result;
