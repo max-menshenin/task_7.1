@@ -65,11 +65,14 @@ document.getElementById('btn_calc').addEventListener('click', function () {
         inputWindow.value = result;
     }
 
-    if (inputWindow.value === 0) {
-        alert('Нельзя на ноль делить');
-        
+    if (operation === 'div') {
+        if (inputWindow.value === 0) {
+            alert('Нельзя на ноль делить');
+
+        }
     }
 })
+
 
 //-----------------------------------
 document.getElementById('btn_clr').addEventListener('click', function () {
