@@ -64,8 +64,10 @@ document.getElementById('btn_calc').addEventListener('click', function () {
         lastOperand = 0;
         inputWindow.value = result;
     }
-
+    console.log(operation, inputWindow.value);
     if (operation === 'div') {
+        console.log(operation, inputWindow.value);
+
         if (inputWindow.value === 0) {
             alert('Нельзя на ноль делить');
 
