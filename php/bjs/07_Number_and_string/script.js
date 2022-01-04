@@ -67,8 +67,13 @@ document.getElementById('btn_calc').addEventListener('click', function () {
     if (operation === 'div') {
         if (inputWindow.value == 0) {
             alert('Нельзя на ноль делить');
+        } else {
+            const result = lastOperand / parseInt(inputWindow.value, 10);
+            operation = null;
+            lastOperand = 0;
+            inputWindow.value = result;
         }
-        
+
     }
 })
 
