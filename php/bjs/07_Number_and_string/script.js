@@ -51,28 +51,24 @@ document.getElementById('btn_sum').addEventListener('click', function () {
 })
 
 document.getElementById('btn_div').addEventListener('click', function () {
-
     lastOperand = parseInt(inputWindow.value, 10);
     operation = 'div';
-    inputWindow.value = '';
 })
 
 document.getElementById('btn_div').addEventListener('click', function () {
-
-    lastOperand = parseInt(inputWindow.value, 10);
+    lastOperand = inputWindow.value
     operation = 'div';
+    console.log(lastOperand);
     inputWindow.value = '';
 })
 
 document.getElementById('btn_mul').addEventListener('click', function () {
-
     lastOperand = parseInt(inputWindow.value, 10);
     operation = 'mul';
     inputWindow.value = '';
 })
 
 document.getElementById('btn_sub').addEventListener('click', function () {
-
     lastOperand = parseInt(inputWindow.value, 10);
     operation = 'sub';
     inputWindow.value = '';
@@ -85,17 +81,19 @@ document.getElementById('btn_calc').addEventListener('click', function () {
         lastOperand = 0;
         inputWindow.value = result;
     }
+
     if (operation === 'div') {
         if (inputWindow.value == 0) {
             alert('На ноль нельзя делить');
-        } else {
-            const result = lastOperand / parseInt(inputWindow.value, 10);
-            operation = null;
-            lastOperand = 0;
-            inputWindow.value = result;
         }
+        const result = lastOperand / parseInt(inputWindow.value, 10);
+        console.log(lastOperand, inputWindow.value);
+        operation = null;
+        lastOperand = 0;
+        inputWindow.value = result;
     }
-
+    
+    
     if (operation === 'mul') {
         const result = lastOperand * parseInt(inputWindow.value, 10);
         operation = null;
