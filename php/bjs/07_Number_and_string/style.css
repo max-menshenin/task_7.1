@@ -1,0 +1,10 @@
+.calc-row {
+    height: 1vh;
+    margin: 1px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.input-window {
+    text-align: end;
+    font-size: x-large;
+}
