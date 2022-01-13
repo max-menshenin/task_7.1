@@ -58,7 +58,6 @@ document.getElementById('btn_div').addEventListener('click', function () {
 document.getElementById('btn_div').addEventListener('click', function () {
     lastOperand = inputWindow.value
     operation = 'div';
-    console.log(lastOperand);
     inputWindow.value = '';
 })
 
